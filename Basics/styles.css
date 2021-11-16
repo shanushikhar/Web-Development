@@ -24,6 +24,11 @@ hr{
 
 img {
     border-radius: 50%;
+    object-fit: contain;
+    overflow: hidden;
+}
+img:hover {
+    background-color: gold;
 }
 
 h1, h2{
@@ -34,11 +39,22 @@ h1, h2{
 .native{
     color: green;
 }
+.anotherClass{
+    font-weight: bold;
+}
+.chicken{
+    background-color: cyan;
+}
 
 /*              ID Selector              */
 #idstyle{
     color: red;
 }
 
-/* id selector has higher precedence over class selector
-id selector will be unique but class selector will be use multiple instances */
+/* 
+* id selector has higher precedence over class selector
+* id selector will be unique in that page but class selector will be use multiple times in that page
+* in class selector we can add more class on that particular element but cant do in ids
+*/
+
+/* we have sudo class if we change the state like hovering over any element */
