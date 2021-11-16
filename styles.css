@@ -39,3 +39,6 @@ h1, h2{
 #idstyle{
     color: red;
 }
+
+/* id selector has higher precedence over class selector
+id selector will be unique but class selector will be use multiple instances */
