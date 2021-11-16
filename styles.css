@@ -1,3 +1,6 @@
+/*                  TAG Selector                */
+
+
 body {
     background-color: #EAF6F6;
 }
@@ -25,4 +28,14 @@ img {
 
 h1, h2{
     color: blueviolet;
+}
+
+/*              class Selector           */
+.native{
+    color: green;
+}
+
+/*              ID Selector              */
+#idstyle{
+    color: red;
 }
