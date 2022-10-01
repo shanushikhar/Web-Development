@@ -1,0 +1,10 @@
+ /* p is selector
+ color is property
+ red is property value
+ property & property value is called declaration */
+
+p{
+    font-size: 64px;
+    color: purple;
+}
+
