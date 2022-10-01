@@ -1,31 +1,41 @@
-/* https://coolors.co/ */
+/* Css reset, wild card selector */
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    line-height: 1.5;
-    background-color: aquamarine;
-    /* both are same to change background-color */
-    background: papayawhip;
-    color: rgb(75, 189, 75);
+    /* view port, it makes body to take full screen*/
+    min-height: 100vh;
 }
+
+header {
+    width: 100%;
+}
+
+/* h1 is block-leval element so it takes full width */
+h1 {
+    /* default browser size of font is 16px
+    if browser increases size it wont allow to do bcoz its fixed
+    */
+    font-size: 3rem;
+    /* it is equivalent of 3rem bcoz of em */
+    padding: 0.4em;
+    border: 2px dashed red;
+    width: 50%;
+}
+
 
 p {
-    /* color: rgba(red, green, blue, alpha);
-    alpha value range from 0 to 1, if set 0 it will invisible
+    /* 1 rem (root em i.e. html or default browser size) is default, it allows browser to increase size
+    1 rem => 16px
     */
-    /* color: hsl(0, 62%, 52%); 
-    hsl => hue saturation and light and also it contains alpha
-    */
-    color: #00000080;
-}
+    font-size: 2rem;
 
-h1 {
-    /* hexadecimal color
-    000  => 000000 < it shows pair >
-    f00 => ff0000
-    808080 => no shortcut
-    */
-    color: #000000fb;
-}
+    /* but if we use em then it checks the parent root element i.e. main and amplify the value based on that not the default html */
+    /* font-size: 2em; */
 
+    /* ch means characters */
+    width: 40ch;
+}
