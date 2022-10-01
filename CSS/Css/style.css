@@ -1,45 +1,31 @@
-/* Univeral selector < selects everything */
-*{
-    font-family: monospace;
-}
+/* https://coolors.co/ */
 
-
-/* Element Selector */
 body {
-    font-size: 20px;
-}
-
-h1,h2{
-    /* grouping selector */
-    color: brown; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    background-color: aquamarine;
+    /* both are same to change background-color */
+    background: papayawhip;
+    color: rgb(75, 189, 75);
 }
 
 p {
-    color: blue;
-    /* its Nuclear , change everything */
-    /* color: blue!important; */
+    /* color: rgba(red, green, blue, alpha);
+    alpha value range from 0 to 1, if set 0 it will invisible
+    */
+    /* color: hsl(0, 62%, 52%); 
+    hsl => hue saturation and light and also it contains alpha
+    */
+    color: #00000080;
 }
 
-p span {
-    /* Nested selector */
-    background-color: gold;
-    text-transform: uppercase;
-}
-
-.highlight {
-    background-color: red;
-    text-transform: lowercase;
-}
-
-/* Class selector, more specific than element selector so higher priority */
-.grey {
-    color: grey;
-    font-size: 27px;
-}
-
-
-/* Id selector ( not recommended ), its more specific than class selector so Id > Class > element */
-#second{
-    font-style: italic;
+h1 {
+    /* hexadecimal color
+    000  => 000000 < it shows pair >
+    f00 => ff0000
+    808080 => no shortcut
+    */
+    color: #000000fb;
 }
 
