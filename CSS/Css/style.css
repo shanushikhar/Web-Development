@@ -1,0 +1,45 @@
+/* Univeral selector < selects everything */
+*{
+    font-family: monospace;
+}
+
+
+/* Element Selector */
+body {
+    font-size: 20px;
+}
+
+h1,h2{
+    /* grouping selector */
+    color: brown; 
+}
+
+p {
+    color: blue;
+    /* its Nuclear , change everything */
+    /* color: blue!important; */
+}
+
+p span {
+    /* Nested selector */
+    background-color: gold;
+    text-transform: uppercase;
+}
+
+.highlight {
+    background-color: red;
+    text-transform: lowercase;
+}
+
+/* Class selector, more specific than element selector so higher priority */
+.grey {
+    color: grey;
+    font-size: 27px;
+}
+
+
+/* Id selector ( not recommended ), its more specific than class selector so Id > Class > element */
+#second{
+    font-style: italic;
+}
+
