@@ -1,41 +1,35 @@
-/* Css reset, wild card selector */
+/* default style from browser i.e. user agemt stylesheet */
+
+/* astrik is called wild cart and is css reset */
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
+    /* content-box => assign value to content only
+    border-box => assign value to content + padding + border */
     box-sizing: border-box;
 }
 
-body {
-    /* view port, it makes body to take full screen*/
-    min-height: 100vh;
-}
-
-header {
-    width: 100%;
-}
-
-/* h1 is block-leval element so it takes full width */
-h1 {
-    /* default browser size of font is 16px
-    if browser increases size it wont allow to do bcoz its fixed
-    */
-    font-size: 3rem;
-    /* it is equivalent of 3rem bcoz of em */
-    padding: 0.4em;
+.container {
     border: 2px dashed red;
-    width: 50%;
+    font-size: 1.5rem;
+     /* em will take the value of rem so 1em = 1.5rem
+     margin : 1em 2em 1.5em => 1em top, 2em right & left,1.5 bottom 
+     margin : 1em 2em 3em 4em => top right bottom left
+     margin : 1em 2em => 1em top & bottom, 2em left & right
+     */
+    margin: 1em;
+    padding: 1em;
+    outline: 5px solid purple;
+    outline-offset: 2px;
 }
 
-
-p {
-    /* 1 rem (root em i.e. html or default browser size) is default, it allows browser to increase size
-    1 rem => 16px
-    */
-    font-size: 2rem;
-
-    /* but if we use em then it checks the parent root element i.e. main and amplify the value based on that not the default html */
-    /* font-size: 2em; */
-
-    /* ch means characters */
-    width: 40ch;
+.circle {
+    /* auto will make it center but it only work for left-right not top-bottom */
+    margin: 5rem auto;
+    background-color: gold;
+    height: 100px;
+    width: 100px;
+    outline: 2px solid red;
+    outline-offset: 0.25rem;
+    border-radius: 50px;
 }
