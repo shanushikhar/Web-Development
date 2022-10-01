@@ -1,5 +1,5 @@
 # Web-Development
 
-## HTml Basics
+## Html + Css
 
-### more to come...
+### Work in Progress, do checkout seperate branch for HTML & CSS
