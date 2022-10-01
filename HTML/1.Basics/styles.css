@@ -1,0 +1,60 @@
+/*                  TAG Selector                */
+
+
+body {
+    background-color: #EAF6F6;
+}
+
+/*
+inline css > internal css > external css
+
+when 1 value is applied then it applies to all side
+   when 2 values are applied then 1st style applies to top-bottom and 2nd applies to left-right
+   when 3 values are applied then 1st style applies to top, 2nd applies to left & right and 3rd applies to bottom
+   when 4 values are applied then style applies to top, right, bottom and left.
+*/
+
+hr{
+    border-style: none;
+    border-top-style: dotted;
+    border-width: 8px;
+    border-color: grey;
+    width: 10%;
+}
+
+img {
+    border-radius: 50%;
+    object-fit: contain;
+    overflow: hidden;
+}
+img:hover {
+    background-color: gold;
+}
+
+h1, h2{
+    color: blueviolet;
+}
+
+/*              class Selector           */
+.native{
+    color: green;
+}
+.anotherClass{
+    font-weight: bold;
+}
+.chicken{
+    background-color: cyan;
+}
+
+/*              ID Selector              */
+#idstyle{
+    color: red;
+}
+
+/* 
+* id selector has higher precedence over class selector
+* id selector will be unique in that page but class selector will be use multiple times in that page
+* in class selector we can add more class on that particular element but cant do in ids
+*/
+
+/* we have sudo class if we change the state like hovering over any element */
