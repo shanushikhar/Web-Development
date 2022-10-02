@@ -1,35 +1,45 @@
-/* default style from browser i.e. user agemt stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');/
 
-/* astrik is called wild cart and is css reset */
-* {
-    margin: 0;
-    padding: 0;
-    /* content-box => assign value to content only
-    border-box => assign value to content + padding + border */
-    box-sizing: border-box;
-}
+/* Typography is a way that text is arranged and presented */
 
-.container {
-    border: 2px dashed red;
+body {
+    padding: 10%;
     font-size: 1.5rem;
-     /* em will take the value of rem so 1em = 1.5rem
-     margin : 1em 2em 1.5em => 1em top, 2em right & left,1.5 bottom 
-     margin : 1em 2em 3em 4em => top right bottom left
-     margin : 1em 2em => 1em top & bottom, 2em left & right
-     */
-    margin: 1em;
-    padding: 1em;
-    outline: 5px solid purple;
-    outline-offset: 2px;
 }
 
-.circle {
-    /* auto will make it center but it only work for left-right not top-bottom */
-    margin: 5rem auto;
-    background-color: gold;
-    height: 100px;
-    width: 100px;
-    outline: 2px solid red;
-    outline-offset: 0.25rem;
-    border-radius: 50px;
+input, button {
+    font-size: inherit;
+}
+
+span {
+    text-decoration: line-through;
+}
+
+p {
+    text-transform: lowercase;
+
+    /* left and right side is uniform */
+    text-align: justify;
+
+    /* start the line after 3em space */
+    text-indent: 3em;
+
+    /* default is 1.2 */
+    line-height: 1.5;
+
+    /* letter-spacing: 0.1em; */
+    word-spacing: 0.3em;
+    /* default is 300 */
+
+    font-weight: bolder;
+    /* font-style: oblique; */
+
+    /* default is serif
+    1st it will try the 1st option in OS if its there i.e. Franklin Gothic Medium if not then 2nd or 3rd.. its fallback
+    in case of more than 1 name it will be in quote like 'Franklin Gothic Medium'
+    */
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    
+    /* external font-style: ; */
+    font-family: 'Roboto', sans-serif;
 }
