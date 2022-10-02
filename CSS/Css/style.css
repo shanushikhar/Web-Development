@@ -1,46 +1,34 @@
-/* link => https://fonts.google.com/ */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');/
-
-/* Typography is a way that text is arranged and presented */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
     padding: 10%;
     font-size: 1.5rem;
-}
-
-input, button {
-    font-size: inherit;
-}
-
-span {
-    text-decoration: line-through;
-}
-
-p {
-    text-transform: lowercase;
-
-    /* left and right side is uniform */
-    text-align: justify;
-
-    /* start the line after 3em space */
-    text-indent: 3em;
-
-    /* default is 1.2 */
-    line-height: 1.5;
-
-    /* letter-spacing: 0.1em; */
-    word-spacing: 0.3em;
-    /* default is 300 */
-
-    font-weight: bolder;
-    /* font-style: oblique; */
-
-    /* default is serif
-    1st it will try the 1st option in OS if its there i.e. Franklin Gothic Medium if not then 2nd or 3rd.. its fallback
-    in case of more than 1 name it will be in quote like 'Franklin Gothic Medium'
-    */
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    
-    /* external font-style: ; */
     font-family: 'Roboto', sans-serif;
+}
+
+main {
+    opacity: 0.7;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+}
+
+/* sudo class
+it has more specificity than normal anchor element
+below is the perfect way to cascade so dont change order :)
+*/
+a:visited {
+    color: aqua;
+}
+/* focus will use in screen reader mode by pressing tab key */
+a:hover, a:focus {
+    color: purple;
+    background-color: goldenrod;
+}
+
+a:active {
+    color: brown;
 }
