@@ -1,34 +1,53 @@
+/* wrap line => alt + z */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-    padding: 10%;
+    padding: 5% 10%;
     font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
 }
 
-main {
-    opacity: 0.7;
+ol {
+    /* default is decimal */
+    list-style-type: lower-alpha;
+    list-style-type: none;
+
+    /* list-style-type: disc; => for showing like bullet point */
+
+    /* padding: 0; */
 }
 
-a {
-    text-decoration: none;
-    color: blue;
-    cursor: pointer;
+
+ul {
+    list-style-type: square;
+    text-align: center;
+    list-style-position: inside;
+    color: blueviolet;
+    line-height: 1.6;
+    /* list-style-image: url('../Image/checkmark.png'); */
+
+    /* shorthand for list-style: ; */
+    /* list-style: square url("../Image/checkmark.png") inside; */
 }
 
-/* sudo class
-it has more specificity than normal anchor element
-below is the perfect way to cascade so dont change order :)
+li {
+    color: grey;
+}
+
+ul li  {
+    color: black;
+}
+
+/* only 2nd list green of ul
+nth-child(odd) => for odd
+nth-child(even) => for even
 */
-a:visited {
-    color: aqua;
-}
-/* focus will use in screen reader mode by pressing tab key */
-a:hover, a:focus {
-    color: purple;
-    background-color: goldenrod;
+ul li:nth-child(2)  {
+    color: red;
 }
 
-a:active {
-    color: brown;
+ul ::marker {
+    color: red;
+    font-size: 1rem;
+    content: "only $5 >> ";
 }
