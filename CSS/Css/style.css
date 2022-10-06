@@ -1,53 +1,59 @@
 /* wrap line => alt + z */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body {
-    padding: 5% 10%;
-    font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-ol {
-    /* default is decimal */
-    list-style-type: lower-alpha;
-    list-style-type: none;
-
-    /* list-style-type: disc; => for showing like bullet point */
-
-    /* padding: 0; */
+body{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
 }
 
+nav{
+    border: 2px solid grey;
+    font-size: 2rem;
+    border-radius: 1em;
+    /* overflow: hidden; */
+    line-height: 6rem;
+    max-width: 600px;
+    margin: 0.5rem auto 1rem;
+}
+
+h2 {
+    background: gold;
+    border-radius: 2rem 2rem 0 0;
+}
 
 ul {
-    list-style-type: square;
-    text-align: center;
-    list-style-position: inside;
-    color: blueviolet;
-    line-height: 1.6;
-    /* list-style-image: url('../Image/checkmark.png'); */
-
-    /* shorthand for list-style: ; */
-    /* list-style: square url("../Image/checkmark.png") inside; */
+    list-style-type: none;
+    
 }
 
 li {
+    border-top: 2px solid black;
+   
+}
+
+li a{
+    display: block
+}
+
+
+li a, li a:checked {
+    text-decoration: none;
     color: grey;
 }
 
-ul li  {
-    color: black;
+li a:hover, 
+li a:focus {
+    background: grey;
+    color: white;
+    cursor: pointer;
 }
 
-/* only 2nd list green of ul
-nth-child(odd) => for odd
-nth-child(even) => for even
-*/
-ul li:nth-child(2)  {
-    color: red;
-}
-
-ul ::marker {
-    color: red;
-    font-size: 1rem;
-    content: "only $5 >> ";
+li:last-child a{
+    border-radius: 0 0 1.5rem 1.5rem;
 }
