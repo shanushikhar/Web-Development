@@ -1,59 +1,62 @@
 /* wrap line => alt + z */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-* {
+/* styles for paragraph */
+
+body {
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+}
+
+/* ul, p or main is block-level element and has 100% full width of parent element/container  and some margin */
+
+/* block => stack on top of each other and create a new line and takes full width of page/parent element if not limiting by some parent element
+inline => takes the width of the content
+inline-block => gets the hybrid like we can keep the content inline */
+
+p {
+    /* block types */
+    background-color: lightgray;
+}
+
+.opposite{
+    /* inline types */
+    /* background-color: #333;
+    color: whitesmoke; */
+
+    /* inline-block types */
+    display: inline-block;
+    background-color: #333;
+    color: whitesmoke;
+    margin-top: 100px;
+    height: 200px;
+    padding: 4rem;
+}
+
+
+/* styles for nav */
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-}
 
-nav{
-    border: 2px solid grey;
-    font-size: 2rem;
-    border-radius: 1em;
-    /* overflow: hidden; */
-    line-height: 6rem;
-    max-width: 600px;
-    margin: 0.5rem auto 1rem;
-}
-
-h2 {
-    background: gold;
-    border-radius: 2rem 2rem 0 0;
-}
-
-ul {
+ul{
+    text-align: right;
     list-style-type: none;
-    
+    background-color: rgb(11, 31, 31);
 }
 
 li {
-    border-top: 2px solid black;
-   
+    display: inline-block;
+    padding:5px;
+    /* to create left right margin */
+    margin-inline: 0.5rem;
 }
 
 li a{
-    display: block
-}
-
-
-li a, li a:checked {
     text-decoration: none;
-    color: grey;
-}
-
-li a:hover, 
-li a:focus {
-    background: grey;
-    color: white;
-    cursor: pointer;
-}
-
-li:last-child a{
-    border-radius: 0 0 1.5rem 1.5rem;
+    color: aliceblue;
 }
