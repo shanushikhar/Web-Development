@@ -1,136 +1,54 @@
-/* wrap line => alt + z */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
- /* to check specificity => https://specificity.keegan.st/ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    font-size: 1.4rem;
-    font-family: "Roboto", sans-serif;
-    /* it allows to have space to scroll vertically */
-    min-height: 200vh;
-} 
-
-/* div are block level and take full width */
-.outer-container{
-    border: 2px dashed black;
-    margin: 20px auto;
-    width: 35vw;
-    height: 45vw;
-    position: relative;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
 }
-/* Specifying 10vw is equivalent to occupying 10% of entire visible screen width. */
-.inner-container{
-    border: 2px solid blue;
-    margin: 80px auto;
-    width: 250px;
-    height: 20rem;
+
+.container{
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto;
+    /* margin: 20px auto; */
+    border: 1px solid #000;
+    /* padding: 50px; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    /* shorthand */
+    flex-flow: row wrap;
+    align-content: space-evenly;
 }
 
 .box{
-    width: 150px;
-    height: 150px;
-    background-color: #fff;
-    padding: 1rem;
-}
-
-/* position: absolute; => it looks for the nearest relative anchestor 
-if outer & inner container both have  position: relative; set then it
-choose the nearest i.e. inner container */
-.absolute{
-    background-color: blue;
-    position: absolute;
-    top:0;
-    left: 0;
-    /* overriding on fixed part element */
-    z-index: 1;
-}
-
-/* its relative to parent container */
-.relative{
-    background-color: red;
-    top:100px;
-    left: 150px;
-    position: relative;
-}
-
-/* fixed comes last thats why its top on the absolute,
- if revert then will change < can do with z-index:1 */
-.fixed{
-    background-color: green;
-    position: fixed;
-    /* its relative to window view */
-    top: 100px;
-}
-
-.sticky{
-    background: rgb(170, 81, 133);
-    position: sticky;
-    top: 0;
-}
-
-/* for the next section */
-
-html{
-    /* for smooth scrolling */
-    scroll-behavior: smooth;
-}
-
-section{
-    height: 100vh;
-}
-
-.blue{
-    background: blue;
-}
-.red{
-    background: red;
-}
-.green{
-    background: green;
-}
-
-footer, header{
-    text-align: center;
     height: 100px;
-    color: antiquewhite;
-}
-
-header{
-    position: sticky;
-    top: 0;
-    font-size: 5rem;
-}
-
-footer{
-    font-size: 3rem;
-
-    /* position: fixed;
-    width: 100%; */
-    /* or */
-    position: sticky;
-
-    bottom: 0;
-    /* bottom: 100px; if want some more bottom space */
+    min-width: 100px;
     background-color: black;
+    color: white; 
+    font-size: 2rem;
+    padding: 0.5rem;
+
+    /* making each item as flex container as it owns 
+    putting number in middle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*  2=> grow 3=> shrink 40% =>basis  */
+    flex: 1 1 150px;
 }
 
-a:visited{
-    color: white;
-}
-
-/* just to share something in any website */
-.social{
-    background-color: royalblue;
-    color: #fff;
-    font-size: inherit;
-    padding: 1rem;
-    position: fixed;
-    top:30%;
-    left: 0;
-    z-index: 1;
+.box:nth-child(2){
+    flex: 2 2 150px;
 }
