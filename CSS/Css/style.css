@@ -1,41 +1,42 @@
 /* wrap line => alt + z */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+ /* to check specificity => https://specificity.keegan.st/ */
 
 body {
     font-size: 1.4rem;
     font-family: "Roboto", sans-serif;
 }
 
-.block{
-    width: 30vw;
-    height: 30vw;
-    background-color: #000;
-    color:white;
+.column{
+    /* column-count: 4;
+    column-width: 250px; */
+    /* shorthand for above lines */
+    columns: 4 250px;
+    column-rule: 3px solid black;
+    column-gap: 3rem;
+}
+
+.column p{
+    margin-top: 0;
+}
+
+.column h2{
+    margin-top: 0;
+    background-color: #333;
+    color:#fff;
     padding: 1rem;
+    /* it helps to not show any background part in next column */
+    break-inside: avoid;
 }
 
-.left{
-    float: left;
-    margin-right: 1rem;
-}
-.right{
-    float: right;
-    margin-left: 1rem;
+.column .quote{
+    font-size: 3rem;
+    text-align: center;
+    column-span: all;
+    margin-top: 2rem;
 }
 
- /* old way for pushing 2nd para out of container */
-.clear{
-    clear: both;
-}
-
-section{
-    background-color: bisque;
-    border: 1px solid #333;
-    padding: 1rem;
-    /* making the section container all the way down and contain the full element containg the element inside but its legecy */
-    /* overflow: auto; */
-
-    /* new way as per mdn */
-    display: flow-root;
+.nowrap{
+    /* this is used to specify certain text to not break/show in multiple lines */
+white-space: nowrap;
 }
