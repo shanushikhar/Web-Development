@@ -2,41 +2,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
  /* to check specificity => https://specificity.keegan.st/ */
 
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
 body {
     font-size: 1.4rem;
     font-family: "Roboto", sans-serif;
+    /* it allows to have space to scroll vertically */
+    min-height: 200vh;
+} 
+
+/* div are block level and take full width */
+.outer-container{
+    border: 2px dashed black;
+    margin: 20px auto;
+    width: 35vw;
+    height: 45vw;
+    position: relative;
+}
+/* Specifying 10vw is equivalent to occupying 10% of entire visible screen width. */
+.inner-container{
+    border: 2px solid blue;
+    margin: 80px auto;
+    width: 250px;
+    height: 20rem;
 }
 
-.column{
-    /* column-count: 4;
-    column-width: 250px; */
-    /* shorthand for above lines */
-    columns: 4 250px;
-    column-rule: 3px solid black;
-    column-gap: 3rem;
-}
-
-.column p{
-    margin-top: 0;
-}
-
-.column h2{
-    margin-top: 0;
-    background-color: #333;
-    color:#fff;
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
     padding: 1rem;
-    /* it helps to not show any background part in next column */
-    break-inside: avoid;
 }
 
-.column .quote{
-    font-size: 3rem;
+/* position: absolute; => it looks for the nearest relative anchestor 
+if outer & inner container both have  position: relative; set then it
+choose the nearest i.e. inner container */
+.absolute{
+    background-color: blue;
+    position: absolute;
+    top:0;
+    left: 0;
+    /* overriding on fixed part element */
+    z-index: 1;
+}
+
+/* its relative to parent container */
+.relative{
+    background-color: red;
+    top:100px;
+    left: 150px;
+    position: relative;
+}
+
+/* fixed comes last thats why its top on the absolute,
+ if revert then will change < can do with z-index:1 */
+.fixed{
+    background-color: green;
+    position: fixed;
+    /* its relative to window view */
+    top: 100px;
+}
+
+.sticky{
+    background: rgb(170, 81, 133);
+    position: sticky;
+    top: 0;
+}
+
+/* for the next section */
+
+html{
+    /* for smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+section{
+    height: 100vh;
+}
+
+.blue{
+    background: blue;
+}
+.red{
+    background: red;
+}
+.green{
+    background: green;
+}
+
+footer, header{
     text-align: center;
-    column-span: all;
-    margin-top: 2rem;
+    height: 100px;
+    color: antiquewhite;
 }
 
-.nowrap{
-    /* this is used to specify certain text to not break/show in multiple lines */
-white-space: nowrap;
+header{
+    position: sticky;
+    top: 0;
+    font-size: 5rem;
+}
+
+footer{
+    font-size: 3rem;
+
+    /* position: fixed;
+    width: 100%; */
+    /* or */
+    position: sticky;
+
+    bottom: 0;
+    /* bottom: 100px; if want some more bottom space */
+    background-color: black;
+}
+
+a:visited{
+    color: white;
+}
+
+/* just to share something in any website */
+.social{
+    background-color: royalblue;
+    color: #fff;
+    font-size: inherit;
+    padding: 1rem;
+    position: fixed;
+    top:30%;
+    left: 0;
+    z-index: 1;
 }
