@@ -44,7 +44,6 @@ body {
     width: 100%;
     background: #2ddf5c;
     padding: 8px 16px;
-
 }
 
 .main-header__host {
@@ -52,25 +51,6 @@ body {
     font-size: 22px;
     text-decoration: none;
     color: #0e4f1f;
-
-}
-
-.main-header__host {
-    font-weight: bold;
-    font-size: 22px;
-    text-decoration: none;
-    color: #0e4f1f;
-}
-
-.main-header > div {
-    display: inline-block;
-    vertical-align: middle;
-
-nav {
-    margin-bottom: 16px;
-    background: #fa923f;
-    padding: 8px 0;
-    
 }
 
 .main-header > div {
