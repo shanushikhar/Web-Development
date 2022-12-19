@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 
-
+ 
 #product-overview {
     background: url('freedom.jpg');
     /* background: #ff1b68; */
@@ -31,9 +31,22 @@ body {
     font-family: 'Anton', sans-serif;
 }
 
-h1 {
-    font-family: sans-serif;
+.main-header{
+    width: 100%;
+    background: #2ddf5c;
+    padding: 8px 16px;
 }
+
+.main-header__host {
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    color: #0e4f1f;
+}
+
+.main-header > div {
+    display: inline-block;
+    vertical-align: middle;
 
 nav {
     margin-bottom: 16px;
