@@ -12,7 +12,7 @@ body {
     margin: 0;
 }
 
-
+ 
 #product-overview {
     background: url('freedom.jpg');
     /* background: #ff1b68; */
@@ -39,10 +39,6 @@ body {
     color: white;
     font-family: 'Anton', sans-serif;
 }
-
-/* h1 {
-    font-family: sans-serif;
-} */
 
 .main-header{
     width: 100%;
