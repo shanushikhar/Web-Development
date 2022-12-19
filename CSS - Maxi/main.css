@@ -1,104 +1,100 @@
 * {
-   /* default is box-sizing: content-box; */
-    /* border-box includes padding & border 
-    put it in universal selector because inheritance wont take place (in body) because browser sets its own box-sizing
-    because section is a block level element 
-    */
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-}
-
+    /* default is box-sizing: content-box; */
+     /* border-box includes padding & border 
+     put it in universal selector because inheritance wont take place (in body) because browser sets its own box-sizing
+     because section is a block level element 
+     */
+     box-sizing: border-box;
+ }
  
-#product-overview {
-    background: url('freedom.jpg');
-    /* background: #ff1b68; */
-    width: 100%;
-    height: 528px;
-    padding: 5px;
-}
-
-.plan {
-    display: inline-block;
-    padding: 16px;
-    margin: 8px;
-    background: #d5ffdc;
-    width: 30%;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.section-title {
-    color: #2ddf5c;
-}
-
-#product-overview h1 {
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.main-header{
-    width: 100%;
-    background: #2ddf5c;
-    padding: 8px 16px;
-}
-
-.main-header__host {
-    font-weight: bold;
-    font-size: 22px;
-    text-decoration: none;
-    color: #0e4f1f;
-}
-
-.main-header > div {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.main-nav{
-    display: inline-block;
-     text-align: right;
-     width: calc(100% - 60px);
+ body {
+     font-family: 'Montserrat', sans-serif;
+     margin: 0;
+ }
+ 
+ 
+ #product-overview {
+     background: url('freedom.jpg');
+     /* background: #ff1b68; */
+     width: 100%;
+     height: 528px;
+     padding: 5px;
+   
+  
+ }
+ 
+ .section-title {
+     color: #2ddf5c;
+ }
+ 
+ #product-overview h1 {
+     color: white;
+     font-family: 'Anton', sans-serif;
+ }
+ 
+ /* h1 {
+     font-family: sans-serif;
+ } */
+ 
+ .main-header{
+     width: 100%;
+     background: #2ddf5c;
+     padding: 8px 16px;
+ }
+ 
+ .main-header__host {
+     font-weight: bold;
+     font-size: 22px;
+     text-decoration: none;
+     color: #0e4f1f;
+ }
+ 
+ .main-header > div {
+     display: inline-block;
      vertical-align: middle;
-}
-
-.main-nav__items{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.main-nav__item {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-.main-nav__item a {
-    text-decoration: none;
-    color: #0e4f1f;
-    font-weight: bold;
-}
+ }
  
-/* below are example of pseudo classes */
-.main-nav__item a:hover,
-.main-nav__item a:active{
-    color: white;
-    border-bottom: 5px solid white;
-}
-
-.main-nav__item--cta a{
-    color: white;
-    background: #ff1b68;
-    padding: 8px 16px;
-    border-radius: 8px;
-}
-
-.main-nav__item--cta a:hover,
-.main-nav__item--cta a:active{
-    color: #ff1b68;
-    background: white;
-    border: none;
-}
+ .main-nav{
+     display: inline-block;
+      text-align: right;
+      width: calc(100% - 60px);
+      vertical-align: middle;
+ }
+ 
+ .main-nav__items{
+     padding: 0;
+     margin: 0;
+     list-style: none;
+ }
+ 
+ .main-nav__item {
+     display: inline-block;
+     margin: 0 15px;
+ }
+ 
+ .main-nav__item a {
+     text-decoration: none;
+     color: #0e4f1f;
+     font-weight: bold;
+ }
+  
+ /* below are example of pseudo classes */
+ .main-nav__item a:hover,
+ .main-nav__item a:active{
+     color: white;
+     border-bottom: 5px solid white;
+ }
+ 
+ .main-nav__item--cta a{
+     color: white;
+     background: #ff1b68;
+     padding: 8px 16px;
+     border-radius: 8px;
+ }
+ 
+ .main-nav__item--cta a:hover,
+ .main-nav__item--cta a:active{
+     color: #ff1b68;
+     background: white;
+     border: none;
+ }
