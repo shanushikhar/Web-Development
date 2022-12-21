@@ -1,140 +1,15 @@
-* {
-   /* default is box-sizing: content-box; */
-    /* border-box includes padding & border 
-    put it in universal selector because inheritance wont take place (in body) because browser sets its own box-sizing
-    because section is a block level element 
-    */
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-}
 
 #product-overview {
-    background: url('freedom.jpg');
-    /* background: #ff1b68; */
+    background: url("freedom.jpg");
     width: 100%;
     height: 528px;
-    padding: 5px;
+    padding: 10px;
 }
 
-.section-title{
-    text-align: center;
+.section-title {
     color: #2ddf5c;
-}
-
-.plan {
-    display: inline-block;
-    padding: 16px;
-    margin: 8px;
-    background: #d5ffdc;
-    width: 30%;
     text-align: center;
-    vertical-align: middle;
-    font-weight: bold;
-    /* color: yellow; */
-}
-
-.plan__highlighted{
-    background: #19b84c;
-    color: #d5ffdc;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.plan__annotation{
-    background: white;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-    color: #0e4f1f;
-    padding: 8px;
-    border-radius: 4px;
-}
-
-.plan__title{
-    color: #0e4f1f;
-}
-
-.plan__price {
-    color: gray;
-}
-
-.plan__highlighted .plan__title{
-    color: white;
-}
-.plan__highlighted .plan__price{
-    color: red;
-}
-
-.button {
-    padding: 8px;
-    font:inherit;
-    cursor: pointer;
-    background: #0e4f1f;
-    color: white;
-    font-weight: bold;
-    border-radius: 8px;
-    border: 3.5px solid #0e4f1f;
-}
-
-.button:hover,
-.button:active{
-    background: white;
-    color: #0e4f1f;
-}
-
-.button:focus{
-    outline: none;
-}
-
-.plan__features{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.plan__features li{
-    margin: 10px 0;
-}
-
-#advertise{
-    /* height: 400px; */
-    margin-top: 80px;
-    padding: 16px;
-    background: #ff1b68;
-}
-
-#advertise .section-title{
-    color: white;
-    margin: 32px;
-}
-
-.advertise__image{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: #ffcede;
-    /* center horizontally */
-    margin: auto;
-}
-
-.advertise__features--list{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.advertise__feature{
-    display: inline-block;
-    width: 30%;
-    vertical-align: top;
-}
-
-.advertise__feature p{
-    font-weight: bold;
-    text-align: center;
-    color: white;
 }
 
 #product-overview h1 {
@@ -142,94 +17,103 @@ body {
     font-family: 'Anton', sans-serif;
 }
 
-.main-header{
-    width: 100%;
-    background: #2ddf5c;
-    padding: 8px 16px;
-}
-
-.main-header__host {
-    font-weight: bold;
-    font-size: 22px;
-    text-decoration: none;
-    color: #0e4f1f;
-}
-
-.main-header > div {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.main-nav{
-    display: inline-block;
-     text-align: right;
-     width: calc(100% - 60px);
-     vertical-align: middle;
-}
-
-.main-nav__items{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.main-nav__item {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-.main-nav__item a {
-    text-decoration: none;
-    color: #0e4f1f;
-    font-weight: bold;
-}
- 
-/* below are example of pseudo classes */
-.main-nav__item a:hover,
-.main-nav__item a:active{
-    color: white;
-    border-bottom: 5px solid white;
-}
-
-.main-nav__item--cta a{
-    color: white;
-    background: #ff1b68;
-    padding: 8px 16px;
-    border-radius: 8px;
-}
-
-.main-nav__item--cta a:hover,
-.main-nav__item--cta a:active{
-    color: #ff1b68;
-    background: white;
-    border: none;
-}
-
-.main-footer{
-    background: black;
-    margin: 10px 0 0 0;
-    padding: 16px;
-}
-
-.main-footer ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.plan__list {
+    width: 80%;
+    margin: auto;
     text-align: center;
 }
 
-.main-footer li{ 
+.plan {
+    background: #d5ffdc;
+    text-align: center;
+    padding: 16px;
+    margin: 8px;
     display: inline-block;
-    padding: 10px;
+    width: 30%;
+    vertical-align: middle;
 }
 
-.main-footer a {
+.plan--highlighted {
+    background: #19b84c;
     color: white;
-    text-decoration: none;
-    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.main-footer a:hover,
-.main-footer a:active{
-    color: #ff1b68;
+.plan__annotation {
+    background: white;
+    color: #19b84c;
+    padding: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
 }
+
+.plan__title {
+    color: #0e4f1f;
+}
+
+.plan__price {
+    color: #858585;
+}
+
+.plan--highlighted .plan__title {
+    color: white;
+}
+
+.plan--highlighted .plan__price {
+    color: #0e4f1f;
+}
+
+.plan__features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.plan__feature {
+    margin: 8px 0;
+}
+
+#key-features {
+    background: #ff1b68;
+    margin-top: 80px;
+    padding: 16px;
+}
+
+#key-features .section-title {
+    color: white;
+    margin: 32px;
+}
+
+.key-feature__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.key-feature {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+
+.key-feature__image {
+    background: #ffcede;
+    width: 128px;
+    height: 128px;
+    border: 2px solid #424242;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.key-feature__description {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+/* h1 {
+    font-family: sans-serif;
+} */
+
